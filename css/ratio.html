@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/bc4fad6d34.js" crossorigin="anonymous"></script>
+    <style>
+        #search_bar {
+            display: flex;
+            justify-content: center;
+            background-color: red;
+            position: relative;
+            width: 100%;
+            padding: 10% 0;
+        }
+
+        #search_bar label {
+            background-color: aliceblue;
+            width: 20%;
+            padding: 5% 0;
+            vertical-align: bottom;
+        }
+
+        #saisie {
+            background-color: antiquewhite;
+            width: 50%;
+            padding: 5% 0;
+        }
+
+        #button {
+            background-color: azure;
+            width: 20%;
+            padding: 5% 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Maintain Aspect Ratio 16:9</h2>
+    <p>Resize the window to see the effect.</p>
+
+    <div id="search_bar">
+        <label for="saisie"><i class="fas fa-map-marker-alt"></i></label>
+        <input type="text" name="recherche" value="Marseille, France" id="saisie" />
+        <button id="button"></button>
+    </div>
+
+</body>
+
+</html>
