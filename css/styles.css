@@ -52,6 +52,7 @@ nav li {
 
 #slogan h1 {
     font-size: 25px;
+    min-width: 0;
 }
 
 #slogan p {
@@ -185,15 +186,14 @@ nav li {
 }
 
 .card_title {
-    font-size: 1em;
+    font-size: 20px;
     font-weight: bold;
-    padding: 5px 0;
+    margin: 5px 0px;
 }
 
 .card_rating {
     color: rgb(217, 217, 217);
-    margin: 7px 0px;
-
+    margin-top: 10px;
 }
 
 .card_rating span {
@@ -205,7 +205,6 @@ nav li {
 #hebergements_marseille {
     background-color: rgb(242, 242, 242);
     border-radius: 25px;
-    height: 100%;
     width: 60%;
 }
 
@@ -285,14 +284,12 @@ nav li {
 #populaires {
     background-color: rgb(242, 242, 242);
     border-radius: 25px;
-    height: 100%;
-    max-height: 700px;
     width: 30%;
 }
 
 #populaires h2 {
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 #populaires_title {
@@ -305,19 +302,21 @@ nav li {
 
 #populaires_title i {
     font-size: 22px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-right: 40px;
 }
 
 .card_group_pop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
     margin: auto;
+    height: 85%;
+    width: 100%;
 }
 
 .card_pop {
-    width: 450px;
+    width: 100%;
     height: 150px;
     margin: 30px 30px;
     background-color: white;
@@ -332,8 +331,7 @@ nav li {
 }
 
 .card_image_pop {
-    object-fit: fill;
-    width: 170px;
+    min-width: 170px;
     position: relative;
     overflow: hidden;
     height: 140px;
@@ -344,8 +342,8 @@ nav li {
 }
 
 .card_image_pop img {
-    width: 150%;
     position: absolute;
+    width: 150%;
     margin-left: 10px;
     top: 50%;
     left: 50%;
@@ -355,21 +353,24 @@ nav li {
     transition-timing-function: ease-in-out;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    object-fit: cover;
 }
 
 .card_body_pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-left: 20px;
     margin-top: 10px;
 }
 
-.content_pop {
-    display: flex;
-    margin: 0px auto;
+.card_pop_text .card_price {
+    margin: 0px;
 }
 
 .card_rating_pop {
     color: rgb(217, 217, 217);
-    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .card_rating_pop span {
@@ -394,11 +395,11 @@ nav li {
 #card_group_act {
     display: flex;
     justify-content: flex-start;
-    margin: 0px 25px 300px;
+    margin: 0px 25px;
     flex-wrap: wrap;
 }
 
-.card_act {
+.card_act a {
     color: rgb(0, 0, 0);
     font-size: 150px;
     display: flex;
@@ -413,7 +414,15 @@ nav li {
     overflow: hidden;
 }
 
-.card_act_tall {
+.card_act_tall:hover .card_act_image_tall img {
+    height: 100%;
+}
+
+.card_act:hover .card_act_image img {
+    width: 100%;
+}
+
+.card_act_tall a {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -434,10 +443,36 @@ nav li {
     border-top-right-radius: 25px;
 }
 
+.card_act_image_tall {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
 .card_act_image img {
     position: absolute;
-    height: 100%;
+    height: 120%;
     object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: filter width;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.card_act_image_tall img {
+    position: absolute;
+    height: 120%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: filter width;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 
 .card_act_title {
@@ -448,7 +483,7 @@ nav li {
 }
 
 .card_act img {
-    width: 100%;
+    width: 120%;
     height: 210px;
 }
 
@@ -456,14 +491,14 @@ nav li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 600px;
+    max-height: 640px;
 }
 
 #card_pair_2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 600px;
+    max-height: 640px;
 }
 
 
@@ -489,6 +524,20 @@ nav li {
 #card_pair_2 .card_act:nth-child(2) {
     background-color: rgb(255, 255, 255);
     min-height: 265px;
+}
+
+/* Footer */
+
+footer {
+    height: 200px;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    margin-top: 50px;
+}
+
+.bloc_footer {
+    width: 30%;
+    margin-left: 3%;
 }
 
 /*--------------------------------------------------------------------------------------------*/
@@ -522,24 +571,26 @@ nav li {
     #populaires {
         width: auto;
         margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #hebergements_marseille {
         width: auto;
         margin: 30px;
     }
-}
 
-@media all and (max-width: 1115px) {
     .card_group_pop {
-        justify-content: center;
+        width: 100%;
+    }
+
+    .card_pop {
+        width: 100%;
     }
 }
 
 @media all and (max-width: 992px) {
-    body {
-        width: auto;
-    }
 
     /* Header */
 
@@ -551,8 +602,9 @@ nav li {
     }
 
     nav ul {
-        margin-left: -50px;
-        width: auto;
+        margin-left: -30px;
+        margin-right: 0;
+        width: 100%;
         justify-content: space-around;
     }
 
@@ -658,16 +710,21 @@ nav li {
 
 @media all and (max-width: 768px) {
 
+    body {
+        margin: 0;
+    }
+
     /* Header */
 
     nav ul {
-        min-width: 500px;
+        width: 100vw;
+        margin-left: -46px;
     }
 
     nav li {
         margin-top: 30px;
         margin-left: 30%;
-        font-size: 30px;
+        font-size: 6vw;
     }
 
     /* Recherche */
@@ -678,8 +735,8 @@ nav li {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
-        min-width: 400px;
+        width: 100vw;
+        padding: 0;
     }
 
     #search_bar {
@@ -688,7 +745,7 @@ nav li {
         position: relative;
         width: 100%;
         padding: 1% 0;
-        margin-left: -10%;
+        margin-left: 5%;
     }
 
     #search_bar label {
@@ -717,11 +774,12 @@ nav li {
         width: 20%;
     }
 
-    /* Cards */
+    /* Hébergements */
 
     #hebergements_marseille {
-        min-width: 450px;
+        min-width: 350px;
         background-color: initial;
+        margin: 0;
     }
 
     .card_heb {
@@ -731,9 +789,10 @@ nav li {
     #populaires {
         background-color: rgb(242, 242, 242);
         border-radius: 0px;
-        margin-left: -10px;
-        width: 105%;
-        min-width: 500px;
+        margin-left: -5px;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
     }
 
     #populaires_title h2 {
@@ -760,4 +819,62 @@ nav li {
         border-top-left-radius: 16px;
         border-bottom-left-radius: 16px;
     }
+
+    /* Activités */
+
+    #card_group_act {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin-left: -2vw;
+    }
+
+    .card_act a {
+        width: 80vw;
+        height: 250px;
+    }
+
+    .card_act_tall a {
+        height: 250px;
+        width: 80vw;
+        margin-bottom: 50px;
+    }
+
+    .card_act_image img {
+        width: 130%;
+    }
+
+    .card_act_image_tall img {
+        width: 130%;
+    }
+
+    .card_act_tall:hover .card_act_image_tall img {
+        width: 100%;
+    }
+
+    .card_act:hover .card_act_image img {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    footer {
+        font-size: 5vw;
+        font-weight: bold;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 4vw;
+        font-weight: normal;
+    }
+
+    .bloc_footer {
+        width: 80%;
+        margin-left: 3%;
+    }
+
 }
