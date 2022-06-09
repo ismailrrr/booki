@@ -1,5 +1,6 @@
 body {
     font-family: "Raleway", sans-serif;
+    margin: 0;
 }
 
 /* Header */
@@ -221,8 +222,7 @@ nav li {
 }
 
 .card_group_heb {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -343,7 +343,7 @@ nav li {
 
 .card_image_pop img {
     position: absolute;
-    width: 150%;
+    width: 190%;
     margin-left: 10px;
     top: 50%;
     left: 50%;
@@ -378,7 +378,7 @@ nav li {
 }
 
 .card_pop:hover .card_image_pop img {
-    width: 130%;
+    width: 150%;
 }
 
 .card_pop:hover .card_title {
@@ -602,7 +602,8 @@ footer {
     }
 
     nav ul {
-        margin-left: -30px;
+        margin-left: 0px;
+        padding-left: 0;
         margin-right: 0;
         width: 100%;
         justify-content: space-around;
@@ -648,6 +649,7 @@ footer {
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding-left: 1%;
     }
 
     #search_bar {
@@ -655,7 +657,7 @@ footer {
         font-size: 2em;
         height: 70px;
         justify-content: center;
-        min-width: 100%;
+        min-width: 80%;
     }
 
     #search_bar label {
@@ -663,8 +665,8 @@ footer {
     }
 
     #saisie {
-        font-size: 1em;
-        height: 70px;
+        font-size: 4vw;
+        height: 66px;
         width: 80%;
         position: relative;
     }
@@ -710,15 +712,17 @@ footer {
 
 @media all and (max-width: 768px) {
 
+
     body {
         margin: 0;
+        width: 100%;
     }
 
     /* Header */
 
     nav ul {
         width: 100vw;
-        margin-left: -46px;
+        margin-left: 0px;
     }
 
     nav li {
@@ -735,7 +739,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: 95vw;
         padding: 0;
     }
 
@@ -744,8 +748,8 @@ footer {
         justify-content: center;
         position: relative;
         width: 100%;
-        padding: 1% 0;
-        margin-left: 5%;
+        padding: 2% 0% 2% 5%;
+        margin-left: 0%;
     }
 
     #search_bar label {
@@ -757,12 +761,13 @@ footer {
     }
 
     #saisie {
+        font-size: 6vw;
         font-weight: bold;
         width: 75%;
         border: 1px solid rgb(242, 242, 242);
         padding: 1% 0;
         margin-right: -5px;
-        height: 90%;
+        height: 88%;
     }
 
     #button {
@@ -789,7 +794,7 @@ footer {
     #populaires {
         background-color: rgb(242, 242, 242);
         border-radius: 0px;
-        margin-left: -5px;
+        margin-left: 0px;
         display: flex;
         justify-content: center;
         width: 100vw;
@@ -800,8 +805,8 @@ footer {
     }
 
     .card_pop {
-        width: 90%;
-        height: 150px;
+        width: 100%;
+        height: 200px;
         margin: 30px 30px;
         background-color: white;
         box-shadow: 0px 2px 10px rgb(219, 219, 219);
@@ -813,7 +818,7 @@ footer {
         width: 30%;
         position: relative;
         overflow: hidden;
-        height: 140px;
+        height: 190px;
         left: 5px;
         top: 5px;
         border-top-left-radius: 16px;
