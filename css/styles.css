@@ -565,15 +565,8 @@ footer {
 
 /*------------- Responsive -----------------*/
 
-@media all and (min-width: 993px) {
+@media screen and (min-width:993px) and (max-width:1024px) {}
 
-    /*
-    .menu:hover {
-        border-top: 2px solid rgb(0, 101, 252);
-        color: rgb(0, 101, 252);
-    }*/
-
-}
 
 @media all and (max-width: 1500px) {
     #hebergements {
@@ -606,24 +599,31 @@ footer {
 
     /* Header */
 
-    nav {
-        height: auto;
+    header {
         display: flex;
         flex-direction: column;
-        margin: auto;
+        padding: 0;
+    }
+
+    nav {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
     }
 
     nav ul {
+        width: 100%;
         margin-left: 0px;
         padding-left: 0;
         margin-right: 0;
-        width: 100%;
-        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
     }
 
-    nav li {
-        margin: 10% 30%;
+    .nav_list {
+        text-align: center;
         font-size: 30px;
+        width: 50%;
     }
 
     nav img {
@@ -632,13 +632,15 @@ footer {
     }
 
 
-    .menu {
+    .nav_list {
         border-bottom: 5px solid rgb(242, 242, 242);
+        padding-bottom: 20px;
         width: 50%;
     }
 
 
-    .menu:hover {
+    .nav_list:hover {
+        border-top: 2px solid white;
         border-bottom: 5px solid rgb(0, 101, 252);
         color: rgb(0, 101, 252);
     }
@@ -720,6 +722,11 @@ footer {
         margin-bottom: -20px;
     }
 
+
+    #hebergements {
+        flex-direction: column-reverse;
+    }
+
 }
 
 @media all and (max-width: 768px) {
@@ -732,15 +739,19 @@ footer {
 
     /* Header */
 
+    nav {
+        width: 100%;
+    }
+
     nav ul {
-        width: 100vw;
+        display: flex;
+        flex-wrap: nowrap;
         margin-left: 0px;
     }
 
-    nav li {
+    .menu {
         margin-top: 30px;
-        margin-left: 30%;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     /* Recherche */
@@ -792,6 +803,10 @@ footer {
     }
 
     /* Hébergements */
+
+    #hebergements {
+        flex-direction: column-reverse;
+    }
 
     #hebergements_marseille {
         min-width: 350px;
